@@ -1,6 +1,3 @@
-# Day 5 of the 100 Days of Code challenge, following Dr. Angela Yu's
-# prescribed course on Udemy.  Course available at: https://www.udemy.com/course/100-days-of-code/
-
 from random import randint
 
 
