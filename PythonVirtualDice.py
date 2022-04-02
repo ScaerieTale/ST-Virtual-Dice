@@ -18,12 +18,13 @@ while True:
 		if armck == 'y':
 			diceNum = int(input("How many dice will you throw? "))
 			diceType = int(input("What type of dice (D4, D12, etc): D"))
-		print(f"{randint({diceNum}, {diceType})}")
+			dmgBonus = int(input("Apply any damage bonus (or type '0' if none): "))
+		print(f"{randint(diceNum, (diceNum * diceType) + dmgBonus)} damage!")
 	elif choice == ('d' or 'damage'):
 		diceNum = int(input("how many dice? "))
 		diceType = int(input("What type? (D8, D12, etc): D "))
 		dmgBonus = int(input("Enter any damage bonus(es) or 0 if none): "))
-		print(f"{randint(diceNum, diceType) + dmgBonus} damage!")
+		print(f"{randint(diceNum, (diceNum * diceType)) + dmgBonus} damage!")
 	elif choice == 's':
 		saving = int(input("Add your save modifier: "))
 		print(f"Your save is {randint(1, 20) + saving}")
